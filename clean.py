@@ -15,3 +15,5 @@ data_m = data_m[~data_m['job'].str.contains('insurance|Insurance')]
 
 data_clean = data_m[['respondent_id', 'name', 'address', 'phone', 'job', 'company', 'birthdate']]
 data_clean.to_csv(output, index=False)
+
+print("Shape of the output file:", data_clean.shape)
